@@ -8,7 +8,7 @@
  *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
-class Solution {
+class RemoveNthnodefromlast {
     public ListNode removeNthFromEnd(ListNode head, int n) {
        ListNode dup = new ListNode(0);
        dup.next=head;
