@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import java.util.Collections;
 
-class Solution {
+class Relativesortarray {
     public int[] relativeSortArray(int[] arr1, int[] arr2) {
         int xy=0;
         int[] res = new int[arr1.length];
