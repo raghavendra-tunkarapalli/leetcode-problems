@@ -14,15 +14,16 @@
  * }
  */
 class Solution {
-    public TreeNode sortedArrayToBST(int[] nums) {
-        return sub(nums,0,nums.length-1);
+    public List<Integer> preorderTraversal(TreeNode root) {
+        ArrayList<Integer> list1 = new ArrayList<>();
+        preorder(root,list1);
+        return list1;
     }
-    public TreeNode sub(int[] arr,int left ,int right){
-        if(left>right)return null;
-        int mid = left+(right-left)/2;
-        TreeNode node1 = new TreeNode(arr[mid]);
-        node1.left = sub(arr,left,mid-1);
-        node1.right = sub(arr,mid+1,right);
-        return node1;
+    public void preorder(TreeNode node,List<Integer> list){
+        if(node==null)return;
+            
+            list.add(node.val);
+            preorder(node.left,list);
+            preorder(node.right,list);
     }
 }
